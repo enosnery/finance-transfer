@@ -21,7 +21,6 @@ public class TransferenciaService {
 
     public int criarTransferencia(TransferenciaRequest request) {
         Transferencia transferencia = new Transferencia(request, TransferenciaUtils.getDataAtual());
-        System.out.println(transferencia.getDataTransferencia());
         try {
             if (transferencia.getDataTransferencia().toInstant().isBefore(transferencia.getDataAgendamento().toInstant())) {
                 return 1;
