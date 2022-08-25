@@ -1,7 +1,6 @@
 package com.enosnery.financetransfer.model;
 
 import com.enosnery.financetransfer.request.TransferenciaRequest;
-import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -29,12 +28,20 @@ public class Transferencia {
     public Transferencia() {
     }
 
-    public Transferencia(TransferenciaRequest request){
+    public Transferencia(String contaOrigem, String contaDestino, Double valor, Date dataTransferencia, Date dataAgendamento) {
+        this.contaOrigem = contaOrigem;
+        this.contaDestino = contaDestino;
+        this.valor = valor;
+        this.dataTransferencia = dataTransferencia;
+        this.dataAgendamento = dataAgendamento;
+    }
+
+    public Transferencia(TransferenciaRequest request, Date dataAtual){
         this.contaOrigem = request.getContaOrigem();
         this.contaDestino = request.getContaDestino();
         this.valor = request.getValor();
         this.dataTransferencia = request.getDataTransferencia();
-        this.dataAgendamento = new Date();
+        this.dataAgendamento = dataAtual;
     }
 
 

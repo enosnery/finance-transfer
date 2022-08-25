@@ -12,6 +12,13 @@ public class TransferenciaRequest {
 
     private Date dataTransferencia;
 
+    public TransferenciaRequest(String contaOrigem, String contaDestino, Double valor, Date dataTransferencia) {
+        this.contaOrigem = contaOrigem;
+        this.contaDestino = contaDestino;
+        this.valor = valor;
+        this.dataTransferencia = dataTransferencia;
+    }
+
     public String getContaOrigem() {
         return contaOrigem;
     }

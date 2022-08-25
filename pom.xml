@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.enosnery</groupId>
     <artifactId>finance-transfer</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1</version>
     <name>finance-transfer</name>
     <description>finance-transfer</description>
     <properties>
@@ -44,6 +44,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
